@@ -1,0 +1,89 @@
+@use "global" as *;
+
+.p-profile {}
+
+.p-profile__inner.l-inner {
+  @include mq(md) {
+    padding-left: rem(89);
+    padding-right: rem(93);
+  }
+}
+
+.p-profile__section {
+  text-align: center;
+}
+
+.p-profile__section-sub {
+  text-align: center;
+}
+
+.p-profile__contents {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(80);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.p-profile__img {
+
+  @include mq(md) {
+    width: rem(360);
+    max-width: 100%;
+  }
+}
+
+.p-profile__content {
+
+  @include mq(md){
+   margin-left: rem(90);
+   width: rem(428); 
+   max-width: 100%;
+  }
+}
+
+.p-profile__content-header {
+  margin-top: rem(32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq(md){
+   margin-top: 0; 
+  }
+}
+
+.p-profile__name {
+  font-size: rem(24);
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.p-profile__sns-items {
+  display: flex;
+  gap: rem(24);
+}
+
+.p-profile__sns-item {
+  width: rem(40);
+
+  @include mq(md){
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+}
+
+.p-profile__content-body {
+  margin-top: rem(24);
+  letter-spacing: 0.02em;
+  line-height: calc(28.8 / 16);
+
+  @include mq(md){
+    margin-top: rem(32);
+    letter-spacing: 0.05em;
+    line-height: calc(32/16);
+  }
+}

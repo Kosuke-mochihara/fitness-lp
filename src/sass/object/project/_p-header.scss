@@ -1,0 +1,89 @@
+@use "global" as *;
+
+.p-header {
+  height: rem(68);
+  position: fixed;
+  top: 0;
+  left: 0;right: 0;
+  background-color: #fff;
+  z-index: 9999;
+
+  @include mq(md) {
+    height: rem(120);
+  }
+}
+
+.p-header__inner.l-inner {
+  height: inherit;
+
+  @include mq(md) {
+    padding: 0 rem(35);
+  }
+}
+
+.p-header__contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+
+
+}
+
+.p-header__logo {
+  width: rem(76);
+  position: relative;
+  z-index: 9999;
+
+  @include mq(md){
+    width: rem(130);
+  }
+}
+
+.p-header__wrapper{
+  display: flex;
+  gap: rem(15);
+
+  @include mq(md){
+    display: none;
+  }
+}
+
+.p-header__content{
+display: none;
+
+@include mq(md){
+  display: flex;
+}
+}
+
+
+.p-header__btn {
+  z-index: 9999;
+}
+
+.p-header__btn:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.p-header__btn a {
+  color: #fff;
+  font-size: rem(14);
+  padding: rem(12) rem(28);
+  letter-spacing: 0.2em;
+  background: linear-gradient(258.82deg, #8B6C3A 21.4%, #B19464 58.78%, #8B6C3A 96.8%);
+  border-radius: 2px;
+
+  @include mq(md){
+    font-size: rem(16);
+    letter-spacing: 0.02em;
+    padding: rem(18) rem(40);
+  }
+}
+
+.p-header__drawer {
+  @include mq(md) {
+    display: none;
+  }
+}

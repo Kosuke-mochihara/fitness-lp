@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.pc-nav {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    text-transform: uppercase;
+    height: inherit;
+  }
+}
+
+.pc-nav__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.pc-nav__item {
+  font-size: rem(15);
+  height: inherit;
+
+}
+
+
+.pc-nav__item a {
+  padding: 0 rem(18);
+  height: inherit;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+}

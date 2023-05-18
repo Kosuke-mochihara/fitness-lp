@@ -1,0 +1,94 @@
+@use "global" as *;
+
+.p-price {
+  padding: rem(56) 0;
+  background-image: url(/src/images/common/price-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  @include mq(md) {
+    padding: rem(96) 0;
+  }
+}
+
+.p-price__inner {}
+
+.p-price__section {}
+
+.p-price__section-sub {}
+
+.p-price__month {
+  margin-top: rem(40);
+  color: #8B6C3A;
+  font-size: rem(40);
+  letter-spacing: 0.1em;
+
+  @include mq(md) {
+    margin-top: rem(80);
+    font-size: rem(72);
+  }
+}
+
+.p-price__month-top {
+  font-size: rem(22);
+  line-height: calc(20/22);
+
+  @include mq(md) {
+    font-size: rem(40);
+    letter-spacing: 0.1em;
+  }
+}
+
+.p-price__month-en {
+  font-size: rem(28);
+
+  @include mq(md) {
+    font-size: rem(56);
+  }
+}
+
+.p-price__month-tax {
+  font-size: rem(16);
+
+  @include mq(md) {
+    font-size: rem(30);
+  }
+}
+
+.p-price__title {
+  margin-top: rem(32);
+  color: #8B6C3A;
+  font-size: rem(18);
+  letter-spacing: 0.1em;
+  line-height: calc(21/14);
+
+  @include mq(md) {
+    margin-top: rem(36);
+    font-size: rem(24);
+  }
+}
+
+.p-price__text {
+  margin-top: rem(8);
+  color: #8B6C3A;
+  font-size: rem(14);
+  letter-spacing: 0.1em;
+  line-height: calc(21/14);
+
+  @include mq(md){
+    margin-top: rem(32);
+    font-size: rem(16);
+  }
+}
+
+.p-price__kailani {
+  margin-top: rem(33);
+  letter-spacing: 0.02em;
+  line-height: calc(21/14);
+
+  @include mq(md){
+    font-size: rem(24);
+   margin-top: rem(32); 
+  }
+}

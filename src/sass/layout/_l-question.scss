@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.l-question {
+  margin: rem(56) 0;
+
+  @include mq(md){
+    margin: rem(96) 0;
+  }
+}

@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.c-section {
+  font-family: $Lora-font-family;
+  font-size: rem(28);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @include mq(md) {
+    font-size: rem(56);
+    letter-spacing: 0.08em;
+    line-height: 1;
+  }
+}
+
+.c-section--accent {
+  position: relative;
+}
+
+.c-section--accent::after {
+  display: none;
+  
+  @include mq(md){
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: rem(340);
+    height: rem(0.6);
+    background-color: black;
+    margin-left: rem(32);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.c-section__sub {
+  font-size: rem(14);
+  letter-spacing: 0.1em;
+
+  @include mq(md) {
+    margin-top: rem(40);
+    font-size: rem(16);
+    line-height: 1;
+  }
+}

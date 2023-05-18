@@ -1,0 +1,260 @@
+@use "global" as *;
+
+.p-campaign {
+  padding: rem(56) 0;
+  position: relative;
+  background-image: url(/src/images/common/gym-sp.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mq(md) {
+    padding: rem(96) 0;
+  }
+}
+
+.p-campaign::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.p-campaign__inner {}
+
+.p-campaign__contents {
+  background-color: #fff;
+  border: 1px solid #8B6C3A;
+  padding: rem(40) 0;
+
+  position: relative;
+
+
+  @include mq(md) {
+    padding: rem(64) 0;
+  }
+}
+
+.p-campaign__contents-inner {
+  width: rem(400);
+  max-width: 100%;
+  margin: auto;
+
+  @include mq(md) {
+    width: rem(882);
+    max-width: 100%;
+  }
+}
+
+.p-campaign__title {
+  color: #8B6C3A;
+  margin: 0 rem(9);
+  padding: rem(12) rem(9) rem(12) rem(11);
+  font-size: rem(20);
+  letter-spacing: 0.05em;
+  text-align: center;
+  border-top: 1px solid #8B6C3A;
+  border-bottom: 1px solid #8B6C3A;
+
+  @include mq(md) {
+    font-size: rem(40);
+    letter-spacing: 0.15em;
+    line-height: calc(60/40);
+  }
+}
+
+.p-campaign__contents-box {
+  width: rem(606);
+  max-width: 100%;
+  margin: auto;
+}
+
+.p-campaign__exclusive {
+  width: rem(124);
+  max-width: 100%;
+  margin-top: rem(24);
+  margin-left: auto;
+  margin-right: rem(20);
+
+  @include mq(md) {
+    width: rem(236);
+    max-width: 100%;
+    margin-top: rem(46);
+    margin-right: rem(-16);
+  }
+}
+
+.p-campaign__course {
+  margin-top: rem(16);
+  letter-spacing: 0.15em;
+  line-height: calc(24/16);
+  padding-left: rem(59);
+  text-align: left;
+
+  @include mq(md) {
+    font-size: rem(28);
+    line-height: 1;
+    padding-left: 0;
+  }
+}
+
+.p-campaign__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 rem(59);
+  margin-top: rem(-20);
+
+  @include mq(md) {
+    margin-top: rem(-48);
+    padding: 0;
+  }
+}
+
+.p-campaign__normal {
+  letter-spacing: 0.15em;
+}
+
+.p-campaign__normal-header {
+
+  @include mq(md) {
+    font-size: rem(24);
+    letter-spacing: 0.05em;
+  }
+}
+
+.p-campaign__normal-footer {
+  @include mq(md) {
+    font-size: rem(36);
+    letter-spacing: 0.05em;
+  }
+}
+
+.p-campaign__normal-footer span {
+  @include mq(md) {
+    font-size: rem(18);
+
+  }
+}
+
+.p-campaign__arrow {
+  width: rem(24);
+
+  @include mq(md) {
+    width: rem(49);
+  }
+}
+
+.p-campaign__price {
+  color: #8B6C3A;
+  font-size: rem(80);
+
+  @include mq(md) {
+    font-size: rem(160);
+  }
+}
+
+.p-campaign__price span {
+  font-size: rem(28);
+
+  @include mq(md) {
+    font-size: rem(40);
+  }
+
+}
+
+.p-campaign__period {
+  padding: rem(32) rem(57);
+  margin-top: rem(-30);
+
+  @include mq(md) {
+    margin-top: rem(-48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.p-campaign__period-box {
+  border: 1px solid #393327;
+  padding: rem(5) rem(7) rem(6) rem(6);
+  display: inline;
+
+  @include mq(md) {
+    padding: rem(9) rem(16) rem(9) rem(15);
+  }
+}
+
+.p-campaign__period-date {
+  font-size: rem(14);
+  margin-top: rem(10);
+
+  @include mq(md) {
+    margin-left: rem(20);
+    font-size: rem(20);
+    margin-top: 0;
+  }
+}
+
+.p-campaign__btn {
+  width: rem(650);
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 0 rem(20);
+  font-size: rem(16);
+}
+
+.p-campaign__btn:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.p-campaign__btn::after:hover {
+right: rem(10);
+}
+
+.p-campaign__btn a {
+  display: inline-block;
+  color: #fff;
+  padding: rem(20) rem(33);
+  background: linear-gradient(265.98deg, #8B6C3A 23.24%, #B19464 55.28%, #8B6C3A 85.32%, #8B6C3A 85.32%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+  border-radius: 2px;
+  position: relative;
+
+  @include mq(md) {
+    font-size: rem(28);
+    padding: rem(28) rem(81) rem(25) rem(67);
+  }
+}
+
+
+.p-campaign__btn a::after {
+
+  @include mq(md) {
+    content: "";
+    margin: auto;
+    position: absolute;
+    background-image: url(../images/common/arrow-right.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    bottom: 0;
+    right: rem(48);
+    width: rem(16);
+    height: rem(27);
+    transition: all .5s;
+  }
+}
+
+.p-campaign__btn a:hover::after {
+
+  @include mq(md) {
+    right: rem(28);
+
+  }
+}
