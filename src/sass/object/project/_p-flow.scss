@@ -9,14 +9,9 @@
   }
 }
 
-.p-flow__inner {}
-
-.p-flow__section {}
-
-.p-flow__section-sub {}
-
 .p-flow__items {
   margin-top: rem(40);
+  overflow: hidden;
 
   @include mq(md) {
     margin-top: rem(80);
@@ -26,6 +21,10 @@
 }
 
 .p-flow__item {
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+
   @include mq(md) {
     width: rem(300);
     max-width: 100%;

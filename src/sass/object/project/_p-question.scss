@@ -1,7 +1,5 @@
 @use "global" as *;
 
-.p-question {}
-
 .p-question__inner.l-inner {
 
   @include mq(md) {
@@ -43,11 +41,11 @@
   }
 }
 
-.p-question__item:last-child{
+.p-question__item:last-child {
   border: none;
 }
 
-.p-question__item-box{
+.p-question__item-box {
   padding-bottom: rem(28);
 
   @include mq(md) {

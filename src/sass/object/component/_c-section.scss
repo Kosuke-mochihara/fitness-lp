@@ -5,6 +5,8 @@
   font-size: rem(28);
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  width: fit-content;
+  margin-inline: auto;
 
   @include mq(md) {
     font-size: rem(56);
@@ -36,6 +38,8 @@
 .c-section__sub {
   font-size: rem(14);
   letter-spacing: 0.1em;
+  width: fit-content;
+  margin-inline: auto;
 
   @include mq(md) {
     margin-top: rem(40);

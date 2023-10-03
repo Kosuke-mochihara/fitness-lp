@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.js-text-effect {
+  position: relative;
+  display: inline-block;
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  --transformX: 0px;
+}
+
+.js-text-effect::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #393327;
+  top: 0;
+  left: 0;
+  transform: translateX(var(--transformX));
+}

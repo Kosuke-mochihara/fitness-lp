@@ -25,6 +25,27 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Allura&family=Lora:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
     rel="stylesheet">
+
+  <!-- JavaScript -->
+  <!-- Adobeフォント -->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'spg1wbg',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+  <!-- gsap -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./js/script.js"></script>
+</body>
+
+ 
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.css">
 
@@ -86,7 +107,7 @@
 
   </header>
 
-  <div class="l-mv p-mv">
+  <div class="l-mv p-mv js-mv">
     <div class="p-mv__inner l-inner">
       <div class="p-mv__contents">
         <div class="p-mv__title">週一のトレーニングで<br>人に見せたくなる<br class="u-mobile">カラダをつくる。</div>
@@ -97,10 +118,10 @@
 
   <section class="l-about p-about">
     <div class="p-about__inner l-inner">
-      <h2 class="p-about__title">トレーニングを受けた会員様からこんな声が届いています。</h2>
+      <h2 class="p-about__title js-campaign">トレーニングを受けた会員様からこんな声が届いています。</h2>
       <div class="p-about__contents">
         <ul class="p-about__items">
-          <li class="p-about__item">
+          <li class="p-about__item p-about__item--reverse js-about-item">
             <div class="p-p-about__img">
               <img src="./images/common/voice_01.jpg" alt="voice-01" decoding="async">
             </div>
@@ -111,7 +132,7 @@
               <p class="p-about__content-subtext">38歳 会社員 女性</p>
             </div>
           </li>
-          <li class="p-about__item">
+          <li class="p-about__item js-about-item">
             <div class="p-p-about__img">
               <img src="./images/common/voice_02.jpg" alt="voice-02" decoding="async">
             </div>
@@ -122,7 +143,7 @@
               <p class="p-about__content-subtext">42歳 会社経営 女性</p>
             </div>
           </li>
-          <li class="p-about__item">
+          <li class="p-about__item p-about__item--reverse js-about-item">
             <div class="p-p-about__img">
               <img src="./images/common/voice_03.jpg" alt="voice-03" decoding="async">
             </div>
@@ -140,10 +161,11 @@
 
   <section class="l-profile p-profile" id="owners-profile">
     <div class="p-profile__inner l-inner">
-      <h2 class="p-profile__section c-section">owner's profile</h2>
-      <div class="p-profile__section-sub c-section__sub">代表プロフィール</div>
-
-      <div class="p-profile__contents">
+      <div class="p-p-profile__section-block js-text-effect-trigger">
+        <h2 class="p-profile__section c-section js-text-effect">owner's profile</h2>
+        <div class="p-profile__section-sub c-section__sub js-text-effect">代表プロフィール</div>
+      </div>
+      <div class="p-profile__contents js-about-item">
         <div class="p-profile__img">
           <img src="./images/common/owner.jpg" alt="owner" decoding="async">
         </div>
@@ -172,7 +194,7 @@
 
   <div class="l-message p-message">
     <div class="p-message__inner l-inner">
-      <div class="p-message__contents">
+      <div class="p-message__contents js-campaign">
         <div class="p-message__contents-title">Message</div>
         <p class="p-message__contents-text">MELIA
           FITNESSではあなたに合った身体の動かし方や食生活の大切さをプロのトレーナーがマンツーマンでサポートいたします。<br>継続することができて挫折しないボディメイク・ダイエットに自信があります。<br>ぜひMELIA
@@ -191,11 +213,21 @@
         <div class="p-message__content-box">
           <div class="p-message__content-title">こんなお悩みありませんか？</div>
           <ul class="p-message__items">
-            <li class="p-message__item">トレーニングをしても本当に痩せられるか不安。</li>
-            <li class="p-message__item">トレーニングしたいけど時間がない。</li>
-            <li class="p-message__item">厳しい食事制限に耐えられるか分からない。</li>
-            <li class="p-message__item">一時的に痩せてもリバウンドしないか心配。</li>
-            <li class="p-message__item">ダイエットに失敗してきたので続けられるか不安。</li>
+            <li class="p-message__item js-message-item">
+              <p class="p-message__item-text">トレーニングをしても本当に痩せられるか不安。</p>
+            </li>
+            <li class="p-message__item js-message-item">
+              <p class="p-message__item-text">トレーニングしたいけど時間がない。</p>
+            </li>
+            <li class="p-message__item js-message-item">
+              <p class="p-message__item-text">厳しい食事制限に耐えられるか分からない。</p>
+            </li>
+            <li class="p-message__item js-message-item">
+              <p class="p-message__item-text">一時的に痩せてもリバウンドしないか心配。</p>
+            </li>
+            <li class="p-message__item js-message-item">
+              <p class="p-message__item-text">ダイエットに失敗してきたので続けられるか不安。</p>
+            </li>
           </ul>
         </div>
       </div>
@@ -204,15 +236,17 @@
 
   <section class="l-feature p-feature" id="feature">
     <div class="p-feature__inner l-inner">
-      <p class="p-feature__main-text">MELIA FITNESSは<br class="u-mobile">そんな悩みをお持ちの方にこそ<br>ご利用していただきたい理由があります。</p>
-      <div class="p-feature__arrow">
+      <p class="p-feature__main-text js-campaign">MELIA FITNESSは<br class="u-mobile">そんな悩みをお持ちの方にこそ<br>ご利用していただきたい理由があります。</p>
+      <div class="p-feature__arrow js-campaign">
         <img src="./images/common/arrow-bottom.jpg" alt="arrow-bottom" decoding="async">
       </div>
-      <h2 class="p-feature__section c-section">feature</h2>
-      <div class="p-feature__section-sub c-section__sub">MELIA FITNESSが選ばれる5つの特徴</div>
+      <div class="p-feature__section-block js-text-effect-trigger">
+        <h2 class="p-feature__section c-section js-text-effect">feature</h2>
+        <div class="p-feature__section-sub c-section__sub js-text-effect">MELIA FITNESSが選ばれる5つの特徴</div>
+      </div>
       <div class="p-feature__contents">
         <ul class="p-feature__items">
-          <li class="p-feature__item">
+          <li class="p-feature__item js-feature-item">
             <div class="p-feature__img">
               <img src="./images/common/feature_01.jpg" alt="feature-01" decoding="async">
             </div>
@@ -222,7 +256,7 @@
               <p class="p-feature__box-text">体重を落とすだけではなく、人に見せたくなるカラダを目指したトレーニングをします。引き締まった魅力的なカラダになると、自信を持つことができます。</p>
             </div>
           </li>
-          <li class="p-feature__item">
+          <li class="p-feature__item js-feature-item">
             <div class="p-feature__img">
               <img src="./images/common/feature_02.jpg" alt="feature-02" decoding="async">
             </div>
@@ -231,7 +265,7 @@
               <p class="p-feature__box-text">お尻や太ももを引き締めるトレーニングをするためのヒップスラスターという最先端のマシンを導入。 女性の美尻をつくると有名なマシンです。</p>
             </div>
           </li>
-          <li class="p-feature__item">
+          <li class="p-feature__item js-feature-item">
             <div class="p-feature__img">
               <img src="./images/common/feature_03.jpg" alt="feature-03" decoding="async">
             </div>
@@ -241,7 +275,7 @@
                 トレーニングは週1回、たったの50分でOKなので、仕事や家事が忙しくてもご利用いただけます。</p>
             </div>
           </li>
-          <li class="p-feature__item">
+          <li class="p-feature__item js-feature-item">
             <div class="p-feature__img">
               <img src="./images/common/feature_04.jpg" alt="feature-04">
             </div>
@@ -251,7 +285,7 @@
                 FITNESSのプログラムは確実に筋肉をつけるのでリバウンドしにくい身体になれます。</p>
             </div>
           </li>
-          <li class="p-feature__item">
+          <li class="p-feature__item js-feature-item">
             <div class="p-feature__img">
               <img src="./images/common/feature_05.jpg" alt="feature-05" decoding="async">
             </div>
@@ -263,7 +297,7 @@
             </div>
           </li>
         </ul>
-        <div class="p-feature__bottom-img">
+        <div class="p-feature__bottom-img js-campaign">
           <picture>
             <source media="(min-width: 768px)" srcset="../images/common/yoga-pc.png">
             <img src="../images/common/yoga-sp.png" alt="ヨガをしている女性" decoding="async">
@@ -275,11 +309,13 @@
 
   <section class="l-voice p-voice">
     <div class="p-voice__inner l-inner"  id="members-voice">
-      <h2 class="p-voice__section c-section">member's voice</h2>
-      <div class="p-voice__section-sub c-section__sub">会員様の声</div>
+      <div class="p-voice__section-block js-text-effect-trigger">
+        <h2 class="p-voice__section c-section js-text-effect">member's voice</h2>
+        <div class="p-voice__section-sub c-section__sub js-text-effect">会員様の声</div>
+      </div>
       <div class="p-voice__contents">
         <ul class="p-voice__items">
-          <li class="p-voice__item">
+          <li class="p-voice__item js-voice-item">
             <div class="p-p-voice__img">
               <img src="./images/common/member-voice_01.png" alt="member-voice-01" decoding="async">
             </div>
@@ -291,7 +327,7 @@
                 FITNESSを選んで良かったです！</p>
             </div>
           </li>
-          <li class="p-voice__item">
+          <li class="p-voice__item js-voice-item">
             <div class="p-p-voice__img">
               <img src="./images/common/member-voice_02.jpg" alt="member-voice-02" decoding="async">
             </div>
@@ -303,7 +339,7 @@
               </p>
             </div>
           </li>
-          <li class="p-voice__item">
+          <li class="p-voice__item js-voice-item">
             <div class="p-p-voice__img">
               <img src="./images/common/member-voice_03.jpg" alt="member-voice-03" decoding="async">
             </div>
@@ -322,13 +358,22 @@
 
   <section class="l-price p-price" id="price">
     <div class="p-price__inner l-inner">
-      <h2 class="p-price__section c-section">price</h2>
-      <div class="p-price__section-sub c-section__sub">ご利用料金</div>
-
+      <div class="p-price__section-block js-text-effect-trigger">
+        <h2 class="p-price__section c-section js-text-effect">price</h2>
+        <div class="p-price__section-sub c-section__sub js-text-effect">ご利用料金</div>
+      </div>
       <div class="p-price__month">
-        <span class="p-price__month-top">月額</span>
-        <span class="p-price__month-en">¥</span>29,800
-        <span class="p-price__month-tax">税込</span>
+        <div class="p-price__month-top-box">
+          <span class="p-price__month-top">月額</span>
+        </div>
+        <div class="p-price__month-en-box">
+          <div class="p-price__month-en-box-content">
+            <span class="p-price__month-en">¥</span>29,800
+          </div>
+        </div>
+        <div class="p-price__month-tax-box">
+          <span class="p-price__month-tax">税込</span>
+        </div>
       </div>
       <div class="p-price__title">週1で通うMELIA FITNESSの<br class="u-mobile">パーソナルトレーニング</div>
       <div class="p-price__text">トレーナーとマンツーマンで理想的なボディメイクを目指します。</div>
@@ -338,7 +383,7 @@
 
   <div class="l-campaign p-campaign">
     <div class="p-campaign__inner l-inner">
-      <div class="p-campaign__contents">
+      <div class="p-campaign__contents js-campaign">
         <div class="p-campaign__contents-inner">
           <div class="p-campaign__title">期間限定無料体験キャンペーン</div>
           <div class="p-campaign__contents-box">
@@ -376,10 +421,12 @@
 
   <section class="l-flow p-flow">
     <div class="p-flow__inner l-inner">
-      <h2 class="p-flow__section c-section c-section--accent">flow</h2>
-      <div class="p-flow__section-sub c-section__sub">パーソナルトレーニングの流れ</div>
+      <div class="p-flow__section-block js-text-effect-trigger">
+        <h2 class="p-flow__section c-section c-section--accent js-text-effect">flow</h2>
+        <div class="p-flow__section-sub c-section__sub js-text-effect">パーソナルトレーニングの流れ</div>
+      </div>
       <ul class="p-flow__items">
-        <li class="p-flow__item">
+        <li class="p-flow__item js-flow-item">
           <div class="p-flow__header">
             <img src="./images/common/flow_01.jpg" alt="flow-1" decoding="async">
           </div>
@@ -389,7 +436,7 @@
             <p class="p-flow__text">まずはカウンセリングでお体の状態やライフスタイルをお伺いし、今後の流れをご説明いたします。</p>
           </div>
         </li>
-        <li class="p-flow__item">
+        <li class="p-flow__item js-flow-item">
           <div class="p-flow__header">
             <img src="./images/common/flow_02.jpg" alt="flow-2" decoding="async">
           </div>
@@ -399,7 +446,7 @@
             <p class="p-flow__text">体組成計で現在の身体の状態を確認します。その後、理想の身体になるためのトレーニングメニューをご提案させていただきます。</p>
           </div>
         </li>
-        <li class="p-flow__item">
+        <li class="p-flow__item js-flow-item">
           <div class="p-flow__header">
             <img src="./images/common/flow_03.jpg" alt="flow-3" decoding="async">
           </div>
@@ -415,37 +462,39 @@
 
   <section class="l-question p-question" id="qa">
     <div class="p-question__inner l-inner">
-      <h2 class="p-question__section c-section">q&a</h2>
-      <div class="p-question__section-sub c-section__sub">よくあるご質問</div>
+      <div class="p-question__section-block js-text-effect-trigger">
+        <h2 class="p-question__section c-section js-text-effect">q&a</h2>
+        <div class="p-question__section-sub c-section__sub js-text-effect">よくあるご質問</div>
+      </div>
       <ul class="p-question__items">
-        <li class="p-question__item">
+        <li class="p-question__item js-question-item">
           <div class="p-question__item-box">
             <p class="p-question__title">ダイエットをしたいのですが、どれくらいの効果がありますか？</p>
             <p class="p-question__answer">個人差はありますが、週に1回のパーソナルトレーニングと自宅でのトレーニング、食生活を改善することで、２か月で効果を感じていただくことができます。</p>
           </div>
         </li>
-        <li class="p-question__item">
+        <li class="p-question__item js-question-item">
           <div class="p-question__item-box">
             <p class="p-question__title">運動をしたことがなく、体力に自信がありません。大丈夫でしょうか？</p>
             <p class="p-question__answer">MELIA
               FITNESSは専属のトレーナーがマンツーマンでトレーニングのサポートをしております。また、無理なトレーニングはしないため、運動をしたことがなく、体力に自信がない方でも安心して取り組んでいただけます。</p>
           </div>
         </li>
-        <li class="p-question__item">
+        <li class="p-question__item js-question-item">
           <div class="p-question__item-box">
             <p class="p-question__title">リバウンドはしませんか？</p>
             <p class="p-question__answer">リバウンドの原因は筋肉が落ちて基礎代謝が下がってしまうことが原因であると考えられています。 MELIA
               FITNESSのプログラムでは、確実に筋肉をつけられますので、リバウンドしにくい体になれます。</p>
           </div>
         </li>
-        <li class="p-question__item">
+        <li class="p-question__item js-question-item">
           <div class="p-question__item-box">
             <p class="p-question__title">厳しい食事制限をする自信がありません。</p>
             <p class="p-question__answer">MELIA FITNESSでは食事の選び方や食べ方など食事改善についてアドバイスを行っております。<br
                 class="u-desktop">厳しい食事制限はありませんのでご安心ください。</p>
           </div>
         </li>
-        <li class="p-question__item">
+        <li class="p-question__item js-question-item">
           <div class="p-question__item-box">
             <p class="p-question__title">トレーニングの際に必要なものはありますか？</p>
             <p class="p-question__answer">トレーニングウェアとトレーニング時に使用するシューズをおもちください。<br
@@ -456,7 +505,7 @@
     </div>
   </section>
 
-  <div class="l-cover p-cover">
+  <div class="l-cover p-cover js-campaign">
     <picture>
       <source media="(min-width: 768px)" srcset="../images/common/gym-pc.jpg">
       <img src="../images/common/gym-sp.jpg" alt="ジム風景" decoding="async">
@@ -464,9 +513,11 @@
   </div>
   <section class="l-access p-access" id="access">
     <div class="p-access__inner l-inner">
-      <h2 class="p-access__section c-section c-section--accent">access</h2>
-      <div class="p-access__section-sub c-section__sub">アクセス</div>
-      <div class="p-access__contents">
+      <div class="p-access__section-block js-text-effect-trigger">
+        <h2 class="p-access__section c-section c-section--accent js-text-effect">access</h2>
+        <div class="p-access__section-sub c-section__sub js-text-effect">アクセス</div>
+      </div>
+      <div class="p-access__contents js-campaign">
         <div class="p-access__content-box">
           <div class="p-access__title">MELIA FITNESS</div>
           <div class="p-access__sub-title">パーソナルトレーニングジム メリアフィットネス</div>
@@ -488,7 +539,7 @@
 
   <div class="l-campaign p-campaign">
     <div class="p-campaign__inner l-inner">
-      <div class="p-campaign__contents">
+      <div class="p-campaign__contents js-campaign">
         <div class="p-campaign__contents-inner">
           <div class="p-campaign__title">期間限定無料体験キャンペーン</div>
           <div class="p-campaign__contents-box">
@@ -577,20 +628,6 @@
   </footer>
 
 
-  <!-- JavaScript -->
-  <!-- Adobeフォント -->
-  <script>
-    (function (d) {
-      var config = {
-        kitId: 'spg1wbg',
-        scriptTimeout: 3000,
-        async: true
-      },
-        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-    })(document);
-  </script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="./js/script.js"></script>
-</body>
+
 
 </html>

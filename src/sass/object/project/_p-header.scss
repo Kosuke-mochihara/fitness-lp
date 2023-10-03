@@ -4,7 +4,8 @@
   height: rem(68);
   position: fixed;
   top: 0;
-  left: 0;right: 0;
+  left: 0;
+  right: 0;
   background-color: #fff;
   z-index: 9999;
 
@@ -26,8 +27,6 @@
   align-items: center;
   justify-content: space-between;
   height: inherit;
-
-
 }
 
 .p-header__logo {
@@ -35,28 +34,27 @@
   position: relative;
   z-index: 9999;
 
-  @include mq(md){
+  @include mq(md) {
     width: rem(130);
   }
 }
 
-.p-header__wrapper{
+.p-header__wrapper {
   display: flex;
   gap: rem(15);
 
-  @include mq(md){
+  @include mq(md) {
     display: none;
   }
 }
 
-.p-header__content{
-display: none;
+.p-header__content {
+  display: none;
 
-@include mq(md){
-  display: flex;
+  @include mq(md) {
+    display: flex;
+  }
 }
-}
-
 
 .p-header__btn {
   z-index: 9999;
@@ -75,7 +73,7 @@ display: none;
   background: linear-gradient(258.82deg, #8B6C3A 21.4%, #B19464 58.78%, #8B6C3A 96.8%);
   border-radius: 2px;
 
-  @include mq(md){
+  @include mq(md) {
     font-size: rem(16);
     letter-spacing: 0.02em;
     padding: rem(18) rem(40);

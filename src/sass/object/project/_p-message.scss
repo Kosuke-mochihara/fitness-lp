@@ -1,7 +1,5 @@
 @use "global" as *;
 
-.p-message {}
-
 .p-message__inner.l-inner {
   @include mq(md) {
     padding-left: rem(89);
@@ -42,10 +40,8 @@
     margin-top: rem(40);
     letter-spacing: 0.1em;
     line-height: 2;
-
   }
 }
-
 
 .p-message__content {
   width: 100vw;
@@ -83,15 +79,15 @@
 
 .p-message__items {
   margin-top: rem(25);
-
-
 }
 
 .p-message__item {
   position: relative;
   padding-left: rem(32);
   margin-top: rem(11);
+}
 
+.p-message__item-text {
   @include mq(md) {
     font-size: rem(18);
     letter-spacing: 0.05em;
@@ -107,5 +103,4 @@
   width: rem(24);
   height: 100%;
   left: 0;
-
 }

@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.p-about {}
-
-.p-about__inner {}
-
 .p-about__title {
   font-size: rem(20);
   color: #8B6C3A;
@@ -30,9 +26,7 @@
   margin-top: rem(40);
 }
 
-
 .p-about__item {
-
   @include mq(md) {
     display: flex;
     justify-content: space-between;
@@ -40,17 +34,16 @@
   }
 }
 
-.p-about__item:nth-child(odd) {
+.p-about__item--reverse {
   @include mq(md) {
     flex-direction: row-reverse;
- 
   }
 }
 
 .p-about__item:nth-child(n+1) {
   margin-top: rem(40);
 
-  @include mq(md){
+  @include mq(md) {
     margin-top: rem(80);
   }
 }
@@ -87,7 +80,6 @@
     width: rem(513);
     max-width: 100%;
   }
-
 }
 
 .p-about__content-title {
@@ -117,7 +109,7 @@
   letter-spacing: 0.05em;
   line-height: calc(21 / 14);
 
-  @include mq(md){
+  @include mq(md) {
     margin-top: rem(17);
     font-size: rem(16);
     text-align: right;
