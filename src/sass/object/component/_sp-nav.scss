@@ -6,19 +6,14 @@
   width: 100%;
   height: 100vh;
   top: 0;
-right: -100%;
+  right: -100%;
   z-index: 1000;
-  // transform: translateX(-100%);
-
-
-
   transition: .3s;
 }
 
 
 .sp-nav.is-open {
-// transform: translateX(0);
-right: 0;
+  right: 0;
 }
 
 .sp-nav__items {

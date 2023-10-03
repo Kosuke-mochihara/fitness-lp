@@ -1,13 +1,10 @@
 @use "global" as *;
 
-.c-sns{
-
-}
-
-.c-sns__items{
+.c-sns__items {
   display: flex;
   gap: rem(24);
 }
-.c-sns__item{
+
+.c-sns__item {
   width: rem(40);
 }

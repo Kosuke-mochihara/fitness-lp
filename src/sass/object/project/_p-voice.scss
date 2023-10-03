@@ -14,20 +14,6 @@
   }
 }
 
-.p-voice__inner {}
-
-.p-voice__section {
-  @include mq(md) {}
-}
-
-.p-voice__section::after {
-
-  @include mq(md) {}
-
-}
-
-.p-voice__section-sub {}
-
 .p-voice__contents {
   margin-top: rem(40);
 }
@@ -55,7 +41,7 @@
 
 .p-voice__item:nth-child(even) {
 
-  @include mq(md){ 
+  @include mq(md) {
     flex-direction: row-reverse;
     padding-left: 0;
   }

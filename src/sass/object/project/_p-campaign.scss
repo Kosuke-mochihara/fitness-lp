@@ -22,15 +22,11 @@
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.p-campaign__inner {}
-
 .p-campaign__contents {
   background-color: #fff;
   border: 1px solid #8B6C3A;
   padding: rem(40) 0;
-
   position: relative;
-
 
   @include mq(md) {
     padding: rem(64) 0;
@@ -213,7 +209,7 @@
 }
 
 .p-campaign__btn::after:hover {
-right: rem(10);
+  right: rem(10);
 }
 
 .p-campaign__btn a {

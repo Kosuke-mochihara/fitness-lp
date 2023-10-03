@@ -1,7 +1,5 @@
 @use "global" as *;
 
-.p-profile {}
-
 .p-profile__inner.l-inner {
   @include mq(md) {
     padding-left: rem(89);
@@ -9,12 +7,20 @@
   }
 }
 
+.p-p-profile__section-block {
+  display: grid;
+  justify-content: center;
+}
+
 .p-profile__section {
   text-align: center;
+  width: fit-content;
 }
 
 .p-profile__section-sub {
   text-align: center;
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .p-profile__contents {
@@ -38,10 +44,10 @@
 
 .p-profile__content {
 
-  @include mq(md){
-   margin-left: rem(90);
-   width: rem(428); 
-   max-width: 100%;
+  @include mq(md) {
+    margin-left: rem(90);
+    width: rem(428);
+    max-width: 100%;
   }
 }
 
@@ -51,8 +57,8 @@
   justify-content: space-between;
   align-items: center;
 
-  @include mq(md){
-   margin-top: 0; 
+  @include mq(md) {
+    margin-top: 0;
   }
 }
 
@@ -70,7 +76,7 @@
 .p-profile__sns-item {
   width: rem(40);
 
-  @include mq(md){
+  @include mq(md) {
     opacity: 0.7;
     transition: 0.3s;
   }
@@ -81,7 +87,7 @@
   letter-spacing: 0.02em;
   line-height: calc(28.8 / 16);
 
-  @include mq(md){
+  @include mq(md) {
     margin-top: rem(32);
     letter-spacing: 0.05em;
     line-height: calc(32/16);
