@@ -790,7 +790,7 @@ select::-ms-expand {
   padding: 56px 0;
   padding: 3.5rem 0;
   position: relative;
-  background-image: url(/src/images/common/gym-sp.jpg);
+  background-image: url(../images/common/gym-sp.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1722,7 +1722,7 @@ select::-ms-expand {
 .p-message__item::before {
   position: absolute;
   content: "";
-  background-image: url(/src/images/common/ph_check-square-offset-thin.png);
+  background-image: url(../images/common/ph_check-square-offset-thin.png);
   background-repeat: no-repeat;
   background-size: contain;
   width: 24px;
@@ -1787,7 +1787,7 @@ select::-ms-expand {
 .p-price {
   padding: 56px 0;
   padding: 3.5rem 0;
-  background-image: url(/src/images/common/price-bg.jpg);
+  background-image: url(../images/common/price-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
