@@ -21,8 +21,8 @@
 
 .c-section--accent::after {
   display: none;
-  
-  @include mq(md){
+
+  @include mq(md) {
     content: "";
     position: absolute;
     display: inline-block;

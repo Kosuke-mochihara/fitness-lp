@@ -4,8 +4,8 @@
   background-color: #FAFAFA;
   padding: rem(56) 0;
 
-  @include mq(md){
-   padding: rem(96) 0; 
+  @include mq(md) {
+    padding: rem(96) 0;
   }
 }
 

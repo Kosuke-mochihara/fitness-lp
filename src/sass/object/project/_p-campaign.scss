@@ -114,7 +114,6 @@
 }
 
 .p-campaign__normal-header {
-
   @include mq(md) {
     font-size: rem(24);
     letter-spacing: 0.05em;
@@ -131,7 +130,6 @@
 .p-campaign__normal-footer span {
   @include mq(md) {
     font-size: rem(18);
-
   }
 }
 
@@ -248,9 +246,7 @@
 }
 
 .p-campaign__btn a:hover::after {
-
   @include mq(md) {
     right: rem(28);
-
   }
 }

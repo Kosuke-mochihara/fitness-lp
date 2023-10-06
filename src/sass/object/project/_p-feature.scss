@@ -64,9 +64,10 @@
 
 .p-feature__img {
   position: relative;
- @include mq(md){
-  width: calc(450 / 1100 * 100%);
- }
+
+  @include mq(md) {
+    width: calc(450 / 1100 * 100%);
+  }
 }
 
 .p-feature__img::before {
@@ -86,8 +87,8 @@
   object-fit: cover;
 }
 
-.p-voice__content{
-  @include mq(md){
+.p-voice__content {
+  @include mq(md) {
     width: calc(540 / 1100 * 100%);
   }
 }

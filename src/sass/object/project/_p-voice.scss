@@ -24,7 +24,6 @@
 
 
 .p-voice__item {
-
   @include mq(md) {
     display: flex;
     justify-content: space-between;
@@ -94,7 +93,6 @@
     line-height: calc(36/24);
   }
 }
-
 
 .p-voice__content-subtext {
   margin-top: rem(12);

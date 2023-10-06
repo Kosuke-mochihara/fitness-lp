@@ -20,14 +20,33 @@
 .pc-nav__item {
   font-size: rem(15);
   height: inherit;
-
+  padding-block: rem(10);
 }
 
-
 .pc-nav__item a {
-  padding: 0 rem(18);
+  padding-block: rem(10);
+  margin-inline: rem(18);
   height: inherit;
   display: inline-block;
   display: flex;
   align-items: center;
+  height: inherit;
+  position: relative;
+}
+
+.pc-nav__item a::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: rem(1);
+  background: #393327;
+  bottom: rem(1);
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform 0.3s;
+}
+
+a:hover::after {
+  transform: scale(1, 1);
 }

@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .p-question__inner.l-inner {
-
   @include mq(md) {
     padding: 0 rem(115);
   }

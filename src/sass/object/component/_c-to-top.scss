@@ -9,7 +9,7 @@
 .c-to-top a {
   display: block;
   width: rem(50);
-  height: rem(50);  
+  height: rem(50);
   border-radius: 50%;
   background-color: #333;
   position: relative;
@@ -17,13 +17,12 @@
 
 .c-to-top a span {
   position: absolute;
-  color:#fff;
+  color: #fff;
   background-color: transparent;
   width: rem(20);
   height: rem(20);
   border-top: 2px solid;
   border-right: 2px solid;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, calc(-50% + 0.25em)) rotate(-45deg);

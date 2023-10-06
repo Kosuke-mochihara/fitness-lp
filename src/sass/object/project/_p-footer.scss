@@ -73,6 +73,28 @@
 
 .p-footer__item a {
   display: block;
+  position: relative;
+
+  @include mq() {
+    padding-block: rem(6);
+  }
+}
+
+.p-footer__item a::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: rem(1);
+  background: #393327;
+  bottom: rem(-1);
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform 0.3s;
+}
+
+a:hover::after {
+  transform: scale(1, 1);
 }
 
 .p-footer__sns-items {
