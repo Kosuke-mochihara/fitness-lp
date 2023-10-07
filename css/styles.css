@@ -1068,17 +1068,16 @@ a:hover::after {
   font-size: 1rem;
 }
 
-.p-campaign__btn:hover {
-  opacity: 0.7;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+@media (hover: hover) {
+  .p-campaign__btn:hover {
+    opacity: 0.7;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .p-campaign__btn::after:hover {
+    right: 0.625rem;
+  }
 }
-
-.p-campaign__btn::after:hover {
-  right: 10px;
-  right: 0.625rem;
-}
-
 .p-campaign__btn a {
   display: inline-block;
   color: #fff;

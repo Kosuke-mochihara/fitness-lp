@@ -201,13 +201,16 @@
   font-size: rem(16);
 }
 
-.p-campaign__btn:hover {
-  opacity: 0.7;
-  transition: 0.3s;
-}
+@media (hover: hover) {
 
-.p-campaign__btn::after:hover {
-  right: rem(10);
+  .p-campaign__btn:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+
+  .p-campaign__btn::after:hover {
+    right: rem(10);
+  }
 }
 
 .p-campaign__btn a {
@@ -224,7 +227,6 @@
     padding: rem(28) rem(81) rem(25) rem(67);
   }
 }
-
 
 .p-campaign__btn a::after {
 
