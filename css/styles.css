@@ -2077,6 +2077,14 @@ a:hover::after {
   width: 40px;
   width: 2.5rem;
 }
+.p-profile__sns-item a {
+  display: block;
+  border-radius: 0.25rem;
+}
+.p-profile__sns-item a:focus-visible {
+  outline: 2px solid #8B6C3A;
+  outline-offset: 2px;
+}
 @media screen and (min-width: 768px) {
   .p-profile__sns-item {
     opacity: 0.7;
