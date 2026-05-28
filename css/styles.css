@@ -21,13 +21,13 @@ body {
   }
 }
 
-html {
-  font-size: 16px;
-}
 @media (max-width: 375px) {
   html {
     font-size: 4.2666666667vw;
   }
+}
+html {
+  font-size: 16px;
 }
 @media screen and (min-width: 768px) {
   html {
@@ -58,6 +58,17 @@ a {
   a:hover {
     opacity: 0.8;
   }
+}
+
+/* フォーカス表示 */
+:focus-visible {
+  outline: 2px solid #8B6C3A;
+  outline-offset: 2px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
 }
 
 *,
@@ -541,7 +552,6 @@ a:hover::after {
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
   opacity: 0;
-  visibility: hidden;
   overflow: hidden;
   --transformX: 0px;
 }
@@ -1316,7 +1326,6 @@ a:hover::after {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   opacity: 0;
-  visibility: hidden;
 }
 @media screen and (min-width: 768px) {
   .p-flow__item {
@@ -1551,7 +1560,7 @@ a:hover::after {
   line-height: 1.5;
 }
 
-.p-footer__copylight {
+.p-footer__copyright {
   display: block;
   margin-top: 40px;
   margin-top: 2.5rem;
