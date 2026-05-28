@@ -23,7 +23,6 @@
 .p-flow__item {
   transform: translateY(100%);
   opacity: 0;
-  visibility: hidden;
 
   @include mq(md) {
     width: rem(300);
